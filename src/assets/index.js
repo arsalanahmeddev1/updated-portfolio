@@ -11,8 +11,12 @@ import framer from './tech/framer.png';
 import css from "./tech/css.png";
 import figma from "./tech/figma.png";
 import gearXpert from './gearXpert.png';
-import project3 from './project3.webp';
-import project2 from './proj1.webp'
+import project1 from './projects/khryslis.png';
+import project2 from './projects/one-car.png';
+import project3 from './projects/diginsy.png';
+import project4 from './projects/goves.png';
+import project5 from './projects/designfoxy.png';
+import project6 from './projects/designsketchers.png';
 import mysql from './tech/mysql.png';
 import express from './tech/express.png';
 import aws from './tech/aws.png';
@@ -28,7 +32,10 @@ import tailwind from "./tech/tailwind.png";
 import threejs from "./tech/threejs.svg";
 import firstTestimonial from './Tars Ken.webp';
 import secondTestimonial from './image.webp';
-import thirdTestimonial from './third testimonial.webp'
+import thirdTestimonial from './third testimonial.webp';
+import astro from './tech/astro-js.png';
+import bootstrap from './tech/bootstrap.png';
+import laravel from './tech/laravel.png';
 
 export {
   logo,
@@ -41,8 +48,12 @@ export {
   close,
   css,
   gearXpert,
+  project1,
   project2,
   project3,
+  project4,
+  project5,
+  project6,
   mysql,
   express,
   aws,
@@ -62,5 +73,7 @@ export {
   redux,
   tailwind,
   threejs,
-
+  astro,
+  bootstrap,
+  laravel,
 };

@@ -7,6 +7,7 @@ import { styles } from "../styles";
 import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
+import { Link } from "react-router-dom";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -18,6 +19,7 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  link,
 }) => {
   const cardRef = useRef(null);
 
@@ -47,51 +49,53 @@ const ProjectCard = ({
 
   return (
     <div ref={cardRef}>
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
-      >
-        <div className="relative w-full h-[230px]">
-          <img
-            src={image}
-            alt="project_image"
-            className="w-full h-full object-cover object-left rounded-2xl"
-          />
+      <Link to={link}>
+        <Tilt
+          options={{
+            max: 45,
+            scale: 1,
+            speed: 450,
+          }}
+          className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        >
+          <div className="relative w-full h-[230px]">
+            <img
+              src={image}
+              alt="project_image"
+              className="w-full h-full object-cover object-left rounded-2xl"
+            />
 
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <img
-                src={github}
-                alt="source code"
-                className="w-1/2 h-1/2 object-contain"
-              />
+            <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+              <div
+                onClick={() => window.open(source_code_link, "_blank")}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              >
+                <img
+                  src={github}
+                  alt="source code"
+                  className="w-1/2 h-1/2 object-contain"
+                />
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
-        </div>
+          <div className="mt-5">
+            <h3 className="text-white font-bold text-[24px]">{name}</h3>
+            <p className="mt-2 text-secondary text-[14px]">{description}</p>
+          </div>
 
-        <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <p
-              key={`${name}-${tag.name}`}
-              className={`text-[14px] ${tag.color}`}
-            >
-              #{tag.name}
-            </p>
-          ))}
-        </div>
-      </Tilt>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <p
+                key={`${name}-${tag.name}`}
+                className={`text-[14px] ${tag.color}`}
+              >
+                #{tag.name}
+              </p>
+            ))}
+          </div>
+        </Tilt>
+      </Link>
     </div>
   );
 };
@@ -103,7 +107,7 @@ const Works = () => {
       ".project-card", // Select all project cards
       {
         opacity: 0,
-        y: 100,
+        y: 200,
       },
       {
         opacity: 1,
@@ -111,10 +115,10 @@ const Works = () => {
         stagger: 0.1, // Stagger delay of 0.3 seconds between each card
         scrollTrigger: {
           trigger: ".works-container",
-          start: "top bottom",  // Trigger when the top of the container reaches the bottom
+          start: "top bottom",
           end: "top center",
           scrub: true,
-          markers: false, // Set to true to see debug markers
+          markers: false,
         },
       }
     );

@@ -10,8 +10,12 @@ import {
   close,
   css,
   gearXpert,
+  project1,
   project2,
   project3,
+  project4,
+  project5,
+  project6,
   mysql,
   express,
   aws,
@@ -32,6 +36,9 @@ import {
   firstTestimonial,
   secondTestimonial,
   thirdTestimonial,
+  astro,
+  bootstrap,
+  laravel,
 } from '../assets'
 
 
@@ -70,10 +77,6 @@ const services = [
     title: "Backend Developer",
     icon: backend,
   },
-  // {
-  //   title: "Ui UX Designer",
-  //   icon: creator,
-  // },
 ];
 
 const technologies = [
@@ -90,30 +93,24 @@ const technologies = [
     icon: javascript,
   },
   {
+    name: "Bootstrap",
+    icon: bootstrap,
+  },
+  {
     name: "React JS",
     icon: reactjs,
   },
   {
+    name: "Laravel",
+    icon: laravel,
+  },
+  {
+    name: "Astro JS",
+    icon: astro,
+  },
+  {
     name: "gsap",
     icon: gsap,
-  },
-  {
-    name: "framer",
-    icon: framer,
-  },
-
-
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
   },
   {
     name: "Tailwind CSS",
@@ -124,27 +121,11 @@ const technologies = [
     icon: mui,
   },
   {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "Express Js",
-    icon: express,
-  },
-  {
-    name: "AWS",
-    icon: aws,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
     name: "MySql",
     icon: mysql,
   },
 
-  {
+    {
     name: "git",
     icon: git,
   },
@@ -198,9 +179,10 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Tekisky Mart",
+    name: "Khryslis",
+    link: 'https://khrylis-social.vercel.app/',
     description:
-      "Tekisky Mart is a web-based platform that allows users to search, explore, and purchase a wide range of products from various providers, offering a seamless and efficient shopping experience.",
+      "khrislis is a social media platform where users can share videos and stream live videos.",
     tags: [
       {
         name: "react",
@@ -211,62 +193,139 @@ const projects = [
         color: "white-text-gradient",
       },
       {
-        name: "node",
+        name: "Inertia",
         color: "pink-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "Laravel",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Mysql",
         color: "green-text-gradient",
       },
 
+    ],
+    image: project1,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "ONE OFF AUTOS",
+    link: 'https://one-off-autos-beta.vercel.app/',
+    description:
+      "One Off Autos is a car dealership website where users can browse and purchase cars.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "white-text-gradient",
+      },
+      {
+        name: "Inertia",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Laravel",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Mysql",
+        color: "pink-text-gradient",
+      },
     ],
     image: project2,
     source_code_link: "https://github.com/",
   },
   {
-    name: "GearXpert",
+    name: "Diginsy",
+    link: 'https://diginsy.com/',
     description:
-      "GearXpert is your ultimate destination for premium auto parts and accessories, Whether you're an automobile enthusiast or a professional, find everything you need to upgrade, repair.",
+      "Diginsy Web",
+      
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "emailJs",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Gsap",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: gearXpert,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "GoGroove-Ecommerce",
-    description:
-      "Go-Groove is your ultimate destination for premium products across various categories. Whether you're a savvy shopper or a professional, enhance, and simplify your lifestyle—all in one place!",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "express",
+        name: "Inertia",
         color: "white-text-gradient",
       },
       {
-        name: "node",
+        name: "Laravel",
         color: "green-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "Mysql",
         color: "green-text-gradient",
       },
     ],
     image: project3,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Grooves",
+    link: 'https://groves-web-app.vercel.app/',
+    description:
+      "Grooves Web",
+    tags: [
+      {
+        name: "Next js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "white-text-gradient",
+      },
+    ],
+    image: project4,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Design Foxy",
+    link: 'https://designfoxy.com/',
+    description:
+      "Design Foxy Web",
+    tags: [
+      {
+        name: "Html",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Css",
+        color: "white-text-gradient",
+      },
+      {
+        name: "Js",
+        color: "white-text-gradient",
+      },
+    ],
+    image: project5,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Design Sketchers",
+    link: 'https://designsketchers.com/',
+    description:
+      "Design Sketchers Web",
+    tags: [
+      {
+        name: "Html",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Css",
+        color: "white-text-gradient",
+      },
+      {
+        name: "Js",
+        color: "white-text-gradient",
+      },
+    ],
+    image: project6,
     source_code_link: "https://github.com/",
   },
 ];
